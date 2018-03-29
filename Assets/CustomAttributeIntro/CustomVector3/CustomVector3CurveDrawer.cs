@@ -13,6 +13,10 @@ public class CustomVector3Drawer : PropertyDrawer
         var xCurve = property.FindPropertyRelative("xCurve");
         var yCurve = property.FindPropertyRelative("yCurve");
         var zCurve = property.FindPropertyRelative("zCurve");
+
+        label = EditorGUI.BeginProperty(position, label, property);
+
+
         EditorGUILayout.CurveField("Animation on X", xCurve.animationCurveValue);
         EditorGUILayout.CurveField("Animation on Y", yCurve.animationCurveValue);
         EditorGUILayout.CurveField("Animation on Z", zCurve.animationCurveValue);

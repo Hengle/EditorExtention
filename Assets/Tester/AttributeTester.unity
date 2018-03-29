@@ -140,29 +140,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5acc113ab523885409bc9d1d4749ce04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 1
+  editorReadOnly: 0
+  range: 4.56
   rangeMinMax:
-    Min: 2.7052627
-    Max: 4.3726306
-  vector3Curve:
-    xCurve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    yCurve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    zCurve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
+    Min: 6.1915784
+    Max: 9.791578
 --- !u!4 &368811484
 Transform:
   m_ObjectHideFlags: 0
