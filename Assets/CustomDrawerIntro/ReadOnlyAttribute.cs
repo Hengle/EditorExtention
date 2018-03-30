@@ -23,19 +23,18 @@ public class ReadOnlyDrawer : PropertyDrawer
 }
 #endif
 
-// The property drawer class should be 
-// 1. placed in an editor script, inside a folder called Editor.
-// OR
-// 2. wrapped in #if UNITY_EDITOR #endif statement
-//
-/* TODO: fix the belows problem:
- * The code below will display a scroll bar in the editor but it will NOT be read only.
-    [ReadOnly]
-    [Range(-10.0f, 70.0f)]
-    public float temperatureCelcius;
-
-    The code below will NOT display a scroll bar in the editor
-    [Range(-10.0f, 70.0f)]
-    [ReadOnly]
-    public float temperatureCelcius;
+/*  The property drawer class should be 
+ *  1. placed in an editor script, inside a folder called Editor.
+ *  OR
+ *  2. wrapped in #if UNITY_EDITOR #endif statement
+ *  
+ *  TODO: fix the belows problem: 
+ *  The code below will display a scroll bar in the editor but it will NOT be read only.
+ *  [ReadOnly]
+ *  [Range(-10.0f, 70.0f)]
+ *  public float temperatureCelcius;
+ *  The code below will NOT display a scroll bar in the editor
+ *  [Range(-10.0f, 70.0f)]
+ *  [ReadOnly]
+ *  public float temperatureCelcius;
 */

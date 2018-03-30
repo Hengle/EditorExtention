@@ -1,7 +1,18 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEditor;
+
+public class CustomRangeAttribute : PropertyAttribute
+{
+
+    public float min;
+    public float max;
+
+    public CustomRangeAttribute(float min, float max)
+    {
+        this.min = min;
+        this.max = max;
+    }
+}
 
 [CustomPropertyDrawer(typeof(CustomRangeAttribute))]
 public class CustomRangeDrawer : PropertyDrawer
@@ -10,9 +21,10 @@ public class CustomRangeDrawer : PropertyDrawer
     {
         CustomRangeAttribute rangAttr = (CustomRangeAttribute)attribute;
 
-        if(property.propertyType == SerializedPropertyType.Float)
+        if (property.propertyType == SerializedPropertyType.Float)
         {
             EditorGUI.Slider(position, property, rangAttr.min, rangAttr.max, label);
         }
     }
 }
+

@@ -1,7 +1,28 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEditor;
+
+public class CustomMinMaxAttribute : PropertyAttribute
+{
+    public float Min, Max;
+
+    public CustomMinMaxAttribute(float min, float max)
+    {
+        Min = min;
+        Max = max;
+    }
+}
+
+[System.Serializable]
+public struct MinMaxPair
+{
+    public float Min, Max;
+    
+    public MinMaxPair(float min, float max)
+    {
+        Min = min;
+        Max = max;
+    }
+}
 
 
 [CustomPropertyDrawer(typeof(CustomMinMaxAttribute))]
@@ -43,3 +64,4 @@ public class CustomMinMaxDrawer : PropertyDrawer
         EditorGUI.EndProperty();
     }
 }
+
