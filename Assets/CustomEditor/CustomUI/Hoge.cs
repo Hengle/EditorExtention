@@ -5,9 +5,13 @@ using UnityEngine;
 
 public class Hoge : MonoBehaviour
 {
-    public bool moge;
-    public int fuga;
-    public string piyo;
+    public bool piyo;
+    public int qiyo;
+    public string riyo;
+
+    public bool fuga;
+    public int guga;
+    public string huga;
 
     void OnEnable()
     {
